@@ -1,0 +1,133 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "game woramet",
+    "email": "woramet1@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+###
+// Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "woramet1@gmail.com",
+    "password": "123456"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single Users
+GET http://localhost:5000/users/25b76893-a9ae-4279-8541-f11384a1c90f
+
+###
+// Update a Users
+PATCH http://localhost:5000/users/25b76893-a9ae-4279-8541-f11384a1c90f
+Content-Type: application/json
+
+{
+    "name": "helloupdate",
+    "email": "worametupdate@gmail.com",
+    "password": "152525",
+    "confPassword": "152525",
+    "role": "user"
+}
+
+###
+// Delete a Users
+DELETE  http://localhost:5000/users/25b76893-a9ae-4279-8541-f11384a1c90f
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "worametupdate@gmail.com",
+    "password": "152525"
+}
+
+###
+GET http://localhost:5000/me
+
+### 
+// Logout
+DELETE http://localhost:5000/logout
+
+###
+// Create a user role admin
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "name admin",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// Login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+// Get All product
+GET http://localhost:5000/products
+
+###
+// Get Single product
+GET http://localhost:5000/products/cbd95fa7-4acc-4623-83e4-c56dcd1a62cb
+
+###
+// POST data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "price": "991"
+}
+
+###
+// POST data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": "898464"
+}
+
+###
+// PATCH data product
+PATCH http://localhost:5000/products/cbd95fa7-4acc-4623-83e4-c56dcd1a62cb
+Content-Type: application/json
+
+{
+    "name": "Product update",
+    "price": "12123"
+}
+
+###
+// DELETE data product
+DELETE http://localhost:5000/products/be5d8d63-f71e-4366-8dcd-2e3429d17c82
+Content-Type: application/json
+
+{
+    "name": "Product update",
+    "price": "12123"
+}
